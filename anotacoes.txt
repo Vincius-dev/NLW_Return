@@ -1,0 +1,7 @@
+Criação do projeto:
+
+Precisa que o node e o npm estejam instalados, fiz a instalação por meio do chocolately.
+rodar o comando vite@latest
+
+
+vite faz com que os navegadores consigam entender as versões mais novas do javascript
