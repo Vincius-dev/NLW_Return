@@ -5,3 +5,6 @@ rodar o comando vite@latest
 
 
 vite faz com que os navegadores consigam entender as versões mais novas do javascript
+
+TS = JS com tipagem estática.
+TSX = TS + JSX (javascript + XML)
