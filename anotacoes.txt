@@ -1,10 +1,62 @@
+SSR E SPA:
+    No ssr o backend e frontend ficam juntos, e sempre enviam as informações para o navegador em html, css e js. Mas o android e api não entendem
+    html, css e js, então fica muito restrito ao navegador e o programador acaba dendo que duplicar o backend e frontend para comunicar de uma forma
+    diferente. 
+    No SPA o backend e front end ficam separados, e a comunicação é feita em json(por meio do react) que ai sim cria o html, css e js para o navegador
+    então todos os tipos de sistemas compreendem o json, tanto mobile quanto apis.
+
 Criação do projeto:
 
-Precisa que o node e o npm estejam instalados, fiz a instalação por meio do chocolately.
-rodar o comando vite@latest
-
+Precisa que o node e o npm estejam instalados, fiz a instalação por meio do chocolately(no windows).
+rodar o comando vite@latest e apartir desse ponto definir as configurações que serão utilizadas.
 
 vite faz com que os navegadores consigam entender as versões mais novas do javascript
 
 TS = JS com tipagem estática.
 TSX = TS + JSX (javascript + XML)
+
+Componente: 
+    É uma função que retorna html.
+    Mesmo nome do arquivo e com primeira letra maíuscula.
+
+Propriedades:
+    É como se fosse o atributo do html, são as caracteristicas unicas de cada elemento, 
+    ex:
+
+    function Button(props) {
+        console.log(props.text)
+    }
+    // imagine que esta dentro da function App
+        <Button text="Enviar" />
+
+    Quando quiser colocar um código js dentro do html é só colocar {}.
+    No typescript precisa definir o que se espera receber de alguma propriedade
+    ex: 
+    interface ButtonProps{
+        text: string;
+    }
+    function Button(props: ButtonProps){
+
+    }
+
+    se a propriedade for opcional é só colocar "?" depois do nome, se não vai dar erro quando criar um elemento.
+    ex:
+    interface ButtonProps{
+        text?: string;
+    }
+    function Button(props: ButtonProps){
+
+    }
+
+Rederizar: Mostrar na tela.
+
+tailwind:
+    Ele serve para otimizar o uso do CSS a partir de classes.
+    Quando usado em conjunto com java, ao invez de chamar class, precisa chamar className, pois class é um termo exclusivo no js.
+    uma das coisas que ele faz inicialmente é resetar os estilos da aplicação.
+    CTRL + BARRA DE ESPAÇO para mostrar as opções do tailwind usando a extensão no vs code.
+    O css fica todo dentro do class dentro de cada elemento.
+
+React:
+    Sempre que precisar que algo mudo de acordo com alguma ação dentro do react, precisa usar o conceito de estado. Onde uma variavel
+    na qual o react presta atenção é criada, e sempre que tem uma mudança nela o react re-cria o Componente com o valor da variavel.
